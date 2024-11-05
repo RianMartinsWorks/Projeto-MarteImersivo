@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Obrigado!";
+    Layout = null; // Se você não quiser usar o layout padrão
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>@ViewBag.Title</title>
+</head>
+
+
+    
+ 
+
+
+
+<body class="text-center" style="background:url(/Imagens/bgquestionarioblack.png)">
+    <div class="container mt-5">
+        <h1 class="display-4 text-success">Obrigado pelo seu feedback!</h1>
+        <p style="color:white" class="lead">Sua opinião é muito importante para nós.</p>
+    </div>
+    <br /><br />
+          <div class="results-title">
+
+              <h1 style="color: #e02222">Clique abaixo para visualizar a média de satisfação</h1>
+              <br />
+              <a href="@Url.Action("Principal", "Home")#Resultados" class="btn btn-danger">Ver Média</a>
+
+
+          </div>
+
+      
+   
+</body>
+</html>

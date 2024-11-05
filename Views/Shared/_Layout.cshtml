@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Meu Aplicativo ASP.NET</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        body.no-bg {
+            background: none !important; /* Remove o fundo */
+        }
+
+        h2 {
+            color: white;
+            text-shadow: -0.9px -0.9px 0 black, 2px -2px 0 black, -1px 1px 0 black, 2px 2px 0 black; /* Cria o efeito de contorno */
+        }
+
+    </style>
+</head>
+
+<body>
+        @RenderBody()
+    
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

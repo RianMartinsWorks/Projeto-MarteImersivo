@@ -1,0 +1,67 @@
+﻿@model PIM_WEB_MARTE.Models.Feedback
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<style>
+    body {
+        background: url(/Imagens/bg3.png);
+        background-size: cover; /* Faz com que a imagem cubra todo o fundo */
+        background-repeat: no-repeat; /* Evita que a imagem se repita */
+    }
+
+    .container {
+        background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente para melhor legibilidade */
+        padding: 20px; /* Espaçamento interno */
+        border-radius: 10px; /* Bordas arredondadas */
+    }
+</style>
+
+<div class="container">
+    <h2>Detalhes</h2>
+
+    <h4>Feedback</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Resposta1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resposta1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Resposta2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resposta2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Resposta3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resposta3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sugestao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sugestao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Voltar a lista", "Index")
+    </p>
+</div>

@@ -1,0 +1,899 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jaldi:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    outline: none; /* Remove contorno */
+    user-select: none; /* Evita seleção de texto */
+    caret-color: transparent; /* Remove o cursor piscante */
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container, .container-fluid {
+    margin: 0 auto;
+    padding: 0 15px; /* Espaço interno para evitar que conteúdo encoste nas bordas */
+}
+
+.navbar {
+    width: 100%; /* Garante que não estoure */
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* Seção principal */
+#Inicio {
+    position: relative;
+    overflow: hidden; /* Evita overflow do conteúdo */
+    padding: 1rem 0;
+}
+
+/* Imagem de fundo - Tema Claro */
+.light-theme #Inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/Imagens/fundo2-claro.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    opacity: 0.3;
+    z-index: 0;
+}
+
+/* Imagem de fundo - Tema Escuro */
+.dark-theme #Inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/Imagens/fundo2.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    opacity: 0.3;
+    z-index: 0;
+}
+
+/* Conteúdo acima da imagem de fundo */
+#Inicio h1,
+#Inicio p,
+#Inicio img {
+    position: relative;
+    z-index: 1;
+}
+
+/* Imagem responsiva */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Media Query para telas pequenas */
+@media (max-width: 668px) {
+    h1 {
+        font-size: 1rem; /* Ajusta o tamanho do título */
+    }
+
+    p {
+        font-size: 0.5rem; /* Ajusta o texto descritivo */
+        padding: 0 10px;
+    }
+}
+
+/* Garante alinhamento em telas grandes */
+.container-fluid {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+
+/* Estilização dos links */
+.nav-link {
+    transition: color 0.5s ease;
+}
+
+    .nav-link:hover {
+        color: #cf1f1f;
+    }
+
+/* Tema Claro */
+.navbar-light-theme {
+    background-color: #e6f1fa;
+    color: #333333;
+}
+
+    .navbar-light-theme .navbar-brand,
+    .navbar-light-theme .nav-link {
+        color: #333333 !important;
+    }
+
+        .navbar-light-theme .nav-link:hover {
+            color: #eb0000 !important;
+        }
+
+.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+    .light-theme a.nav-link {
+        color: #000000 !important;
+    }
+
+    .light-theme .btn-light {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+.navbar-dark-theme {
+    background-color: #07080a;
+    color: #ffffff;
+}
+
+    .navbar-dark-theme .navbar-brand,
+    .navbar-dark-theme .nav-link {
+        color: #e0e0e0 !important;
+    }
+
+        .navbar-dark-theme .nav-link:hover {
+            color: #cf1f1f !important; /* Efeito hover vermelho */
+        }
+
+/* Tema Escuro */
+
+
+.dark-theme {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+    .dark-theme a.nav-link {
+        color: #ffffff !important;
+    }
+
+    .dark-theme .btn-light {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+
+    /*~~~~~~~~~~~~~MAPA~~~~~~~~~~~~~~~~~~*/
+
+/* Seção Mapa */
+#Mapa {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem;
+    width: 100%;
+    height: 100vh;
+
+
+}
+      
+
+/* Estilo do Título Mapa do Museu */
+#mapTitle {
+    position: relative; /* Torna o título relativo ao seu espaço */
+    z-index: 2; /* Coloca o título acima de outros elementos */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para melhor legibilidade */
+    color: white; /* Cor do texto */
+    padding: 10px; /* Adiciona algum espaçamento ao redor do texto */
+    border-radius: 8px; /* Arredonda as bordas do fundo do título */
+}
+
+/* Ajusta a imagem do mapa */
+#Mapa img {
+    max-width: 800px; /* Largura máxima para desktops */
+    width: 90%; /* Ajusta para telas menores */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+/* Tema Claro */
+.light-theme #Mapa {
+    background-image: url('/Imagens/bg1-claro.png');
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+    .light-theme #Mapa h1 {
+        color: black;
+        background-color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 8px;
+    }
+
+/* Tema Escuro */
+.dark-theme #Mapa {
+    background-image: url('/Imagens/bg1.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+    .dark-theme #Mapa h1 {
+        color: white;
+        background-color: black;
+        padding: 10px 20px;
+        border-radius: 8px;
+    }
+
+/* Responsividade: Ajuste para dispositivos menores */
+@media (max-width: 768px) {
+    #mapTitle {
+        font-size: 1.8rem; /* Reduz o tamanho do título */
+        margin-bottom: 20px;
+    }
+
+    #Mapa img {
+        max-width: 100%; /* A imagem ocupa no máximo a largura da tela */
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    #mapTitle {
+        font-size: 1.5rem; /* Título ainda menor para pequenos dispositivos */
+    }
+
+    #Mapa img {
+        max-width: 90%; /* Evita que ocupe toda a largura em telas muito pequenas */
+        border-radius: 15px; /* Ajusta o raio da borda para dispositivos menores */
+    }
+}
+
+.form-wrapper {
+    width: 100%;
+}
+
+.formulario {
+    margin-bottom: 2rem;
+}
+
+.form-select, .form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #4CAF50; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+    .submit-btn:hover {
+        background-color: #45a049; /* Cor ao passar o mouse */
+    }
+
+
+ /* Container principal para os contêineres de Marte, Serviços e Objetivos */
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(/Imagens/bg5.png);
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha quando necessário */
+    justify-content: space-between; /* Espaçamento entre as divs */
+    align-items: flex-start;
+    margin: 20px auto; /* Centraliza o container horizontalmente */
+    width: 90%; /* Define uma largura para o container */
+    max-width: 1200px; /* Limita o tamanho máximo para telas maiores */
+}
+
+.custom-div {
+    background-color: #cf1f1f; /* Cor de fundo padrão */
+    color: #fff; /* Cor do texto */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 30%; /* Permite que o tamanho mude com o espaço disponível */
+    min-width: 250px; /* Define uma largura mínima para dispositivos menores */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+    .custom-div h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .custom-div p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+.divider {
+    width: 110px;
+    height: 4px;
+    background-color: #fff;
+    margin: 10px auto;
+}
+
+/* Tema Claro */
+.light-theme {
+    background-image: url(/Imagens/fundoestrelado.png);
+    color: black; /* Altera a cor do texto para preto */
+}
+
+/* Tema Escuro */
+.dark-theme {
+    background-image: url(/Imagens/bgpapel.png);
+    color: white; /* Altera a cor do texto para branco */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .custom-div {
+        flex: 1 1 100%; /* Ocupa toda a largura em telas menores */
+        margin: 10px 0; /* Margem vertical entre os divs */
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-div h2 {
+        font-size: 20px; /* Tamanho do título menor em telas muito pequenas */
+    }
+
+    .custom-div p {
+        font-size: 14px; /* Tamanho do texto menor em telas muito pequenas */
+    }
+
+    .divider {
+        width: 80px; /* Dimensões menores para o divisor */
+    }
+}
+
+/* Estilos adicionais para a seção História */
+#Historia {
+    background-image: url(/Imagens/bgpapel3.png); /* Imagem de fundo */
+    margin-block-end: 30px; /* Margem inferior */
+    padding: 50px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+    border-radius: 15px; /* Arredondar bordas da seção */
+}
+
+/* Títulos na seção História */
+#Historia h1 {
+    color: black; /* Cor do título no tema claro */
+    font-size: 2.5rem; /* Tamanho maior para o título */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.dark-theme #Historia h1 {
+    color: white; /* Cor do título no tema escuro */
+}
+
+/* Estilos para os contêineres do carrossel */
+.carousel-inner img {
+    border-radius: 20px; /* Arredondar bordas das imagens do carrossel */
+}
+
+/* Contêiner de texto */
+.text-container {
+    border-radius: 20px; /* Arredondar bordas do contêiner de texto */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    color: white; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    height: 280px; /* Altura fixa para o contêiner de texto */
+    margin-top: 70px; /* Margem superior */
+    max-width: 500px; /* Limita a largura do texto */
+    display: flex; /* Flexbox para centralizar o texto */
+    flex-direction: column; /* Direção vertical */
+    justify-content: center; /* Centraliza verticalmente */
+}
+
+/* Definindo tamanhos das fontes */
+.text-container h2 {
+    font-size: 1.5rem; /* Tamanho da fonte do título */
+    margin: 0; /* Remove margens */
+}
+
+.text-container h3 {
+    font-size: 1rem; /* Tamanho da fonte da descrição */
+    margin: 0; /* Remove margens */
+}
+
+/* Estilo para tema claro na seção História */
+.light-theme #Historia {
+    background-image: url(/Imagens/fundosite.jpg); /* Imagem de fundo para tema claro */
+    color: black; /* Cor do texto para o tema claro */
+}
+
+/* Estilo para tema escuro */
+.dark-theme #Historia {
+    background-image: url(/Imagens/bgpapel3.png); /* Imagem de fundo para tema escuro */
+    color: white; /* Cor do texto para o tema escuro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #Historia h1 {
+        font-size: 2rem; /* Tamanho menor para telas pequenas */
+    }
+
+    .carousel-inner img {
+        height: 250px; /* Altura menor das imagens do carrossel */
+    }
+
+    .text-container {
+        max-width: 90%; /* Largura total para dispositivos móveis */
+        margin: 0 auto; /* Centraliza o contêiner de texto */
+        height: 180px; /* Altura fixa para o contêiner de texto */
+    }
+
+    /* Flexbox para empilhar no mobile */
+    .w-100.d-flex {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+    }
+
+    /* Altera o tamanho do carrossel para 100% na tela pequena */
+    #carouselExampleIndicators {
+        max-width: 100%; /* Largura total no mobile */
+    }
+}
+
+/* Carrossel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: red; /* Cor dos ícones */
+    border-radius: 50%; /* Forma circular */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.carousel-indicators button {
+    background-color: gray; /* Cor padrão dos botões */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+    .carousel-indicators button.active {
+        background-color: red; /* Cor do botão ativo */
+        border-radius: 10px; /* Bordas arredondadas */
+    }
+    
+    /* Estilizando os botões de navegação */
+    #carouselExampleIndicators .carousel-control-prev-icon,
+    #carouselExampleIndicators .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+        border-radius: 50%; /* Deixa o botão redondo */
+        padding: 10px;
+    }
+
+    /* Centralizando e ajustando os botões */
+    #carouselExampleIndicators .carousel-control-prev,
+    #carouselExampleIndicators .carousel-control-next {
+        width: 40px;
+        height: 40px;
+        top: 50%; /* Posiciona o botão no meio verticalmente */
+        transform: translateY(-50%); /* Ajusta para centralizar completamente */
+        border: 2px solid white;
+        border-radius: 50%;
+        transition: transform 0.2s ease;
+    }
+
+    /* Efeito de hover */
+    #carouselExampleIndicators .carousel-control-prev:hover,
+    #carouselExampleIndicators .carousel-control-next:hover {
+        transform: translateY(-50%) scale(1.1); /* Centraliza e aumenta no hover */
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~DIVIDIR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* Questionário */
+#Questionario {
+    background: url(../Imagens/bgquestionarioblack.png); /* Imagem de fundo para o tema escuro */
+    background-size: cover; /* Para cobrir toda a área */
+    width: 100%;
+    color: snow; /* Cor do texto no tema escuro */
+}
+
+#questionario-form {
+    max-width: 500px; /* Limita a largura máxima do formulário */
+    width: 100%; /* Ocupa 100% da largura disponível */
+    margin: 0 auto; /* Centraliza o formulário */
+    padding: 20px; /* Espaçamento interno */
+    background: url(../Imagens/bgpapel3.png); /* Cor de fundo clara para o formulário */
+    border-radius: 30px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+    #questionario-form label {
+        font-size: 1.1rem; /* Tamanho da fonte dos labels */
+        display: block; /* Exibe como bloco */
+        margin-bottom: 8px; /* Espaçamento entre o label e o campo */
+        width: 100%; /* Largura total do label */
+        text-align: center; /* Centraliza o texto dos labels */
+    }
+
+    #questionario-form .form-group {
+        display: flex;
+        justify-content: center; /* Centraliza o conteúdo da form-group */
+        flex-direction: column;
+        align-items: center; /* Alinha o conteúdo no centro */
+        width: 100%; /* Largura total */
+    }
+
+    #questionario-form .form-control {
+        font-size: 1rem; /* Tamanho da fonte nos campos */
+        padding: 10px; /* Padding interno nos campos */
+        border-radius: 10px; /* Bordas arredondadas */
+        margin-bottom: 20px; /* Espaçamento inferior */
+        width: 100%; /* Largura total */
+        text-align: center; /* Centraliza o texto dentro do campo select */
+    }
+
+    #questionario-form select {
+        text-align-last: center; /* Centraliza a opção selecionada */
+    }
+
+    #questionario-form button {
+        font-size: 1rem; /* Tamanho da fonte no botão */
+        padding: 12px; /* Padding no botão */
+        background-color: #e01b1b; /* Cor personalizada */
+        border-radius: 20px; /* Bordas arredondadas */
+        width: 80%; /* Botão ocupará 80% da largura do formulário */
+        color: white; /* Cor do texto */
+        cursor: pointer; /* Mão ao passar o mouse */
+        transition: background-color 0.3s ease; /* Transição suave na cor */
+    }
+
+        #questionario-form button:hover {
+            background-color: #e04a4a; /* Cor do botão ao passar o mouse */
+        }
+
+/* Estilos para o tema claro */
+.light-theme #Questionario {
+    background: url(../Imagens/bgquestionarioclaro.png); /* Imagem de fundo para o tema claro */
+    color: snow; /* Cor do texto no tema claro */
+}
+
+.light-theme #questionario-form {
+    background: url(../Imagens/bgpapel3.png); /* Cor de fundo clara para o formulário no tema claro */
+}
+
+/* Estilos para o tema escuro */
+.dark-theme #Questionario {
+    background: url(../Imagens/bgquestionarioblack.png); /* Imagem de fundo para o tema escuro */
+    color: snow; /* Cor do texto no tema escuro */
+}
+
+.dark-theme #questionario-form {
+    background: url(../Imagens/bgpapel3.png); /* Cor de fundo escura para o formulário no tema escuro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #questionario-form {
+        padding: 15px; /* Menos padding em telas pequenas */
+    }
+
+        #questionario-form h2 {
+            font-size: 1.5rem; /* Tamanho menor para o título */
+        }
+
+        #questionario-form .form-control,
+        #questionario-form button {
+            font-size: 0.9rem; /* Tamanho da fonte menor nos campos e botão */
+            padding: 10px; /* Padding menor */
+        }
+}
+
+
+
+/* RESULTADOS */
+
+/* Seção de Resultados */
+.results-container {
+    width: 100%;
+    padding: 8rem 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para o título da seção */
+.results-title {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+    .results-title h2 {
+        margin: 0;
+        font-size: 2.0rem;
+        letter-spacing: 0.5rem;
+        font-weight: 500;
+        margin-bottom: 30px;
+        color: black; /* Cor do texto para tema claro */
+    }
+
+    .results-title h1 {
+        margin: 0;
+        font-family: "Afacad", sans-serif;
+        font-size: 3.5rem;
+        color: #e02222;
+    }
+
+/* Contêiner das métricas */
+.metrics-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 6rem;
+    flex-wrap: wrap; /* Permite empilhar as métricas em telas menores */
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 1rem; /* Margem para espaçamento */
+}
+
+    .metric h3 {
+        font-size: 1.5rem;
+        font-family: "MontSerrat", sans-serif;
+        color: #000; /* Cor do texto para tema claro */
+        margin-bottom: 2rem;
+    }
+
+/* Círculo de porcentagem */
+.percentage-circle {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background-color: #e02222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.percentage {
+    font-size: 2rem;
+    color: #fff; /* Cor do texto para porcentagem */
+    font-weight: bold;
+}
+
+/* Seção de depoimentos */
+.testimonials-results-container {
+    width: 100%;
+}
+
+.testimonials-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.testimonials-quotes {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+}
+
+/* Estilo para as citações */
+.quote {
+    background-color: #fff; /* Cor de fundo para tema claro */
+    padding: 2rem 4rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    text-align: center;
+    font-style: italic;
+}
+
+    .quote p {
+        font-size: 1.5rem;
+    }
+
+.quote-author {
+    margin-top: 10rem;
+    font-size: 1.5rem;
+    color: #ff8255;
+}
+
+/* Estilos para o tema claro */
+.light-theme .results-container {
+    background: url(/Imagens/fundosite.jpg); /* Fundo para tema claro */
+}
+
+/* Estilos para o tema escuro */
+.dark-theme .results-title h2 {
+    color: white; /* Cor do título para tema escuro */
+}
+
+.dark-theme .results-title h1 {
+    color: #ff7b7b; /* Cor do título para tema escuro */
+}
+
+.dark-theme .metric h3 {
+    color: #fff; /* Cor do texto para métricas no tema escuro */
+}
+
+.dark-theme .percentage-circle {
+    background-color: #ff4d4d; /* Círculo de porcentagem para tema escuro */
+}
+
+.dark-theme .quote {
+    background: url(/Imagens/bgpapel1.jpg); /* Fundo para citações no tema escuro */
+    color: white; /* Texto das citações no tema escuro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .results-title h2 {
+        font-size: 1.5rem; /* Tamanho menor para o título */
+    }
+
+    .results-title h1 {
+        font-size: 2.5rem; /* Tamanho menor para o subtítulo */
+    }
+
+    .metrics-container {
+        flex-direction: column; /* Empilha as métricas verticalmente */
+        align-items: center; /* Centraliza as métricas */
+    }
+
+    .metric {
+        width: 80%; /* Limita a largura das métricas */
+    }
+
+    .percentage-circle {
+        width: 8rem; /* Tamanho menor para o círculo */
+        height: 8rem; /* Tamanho menor para o círculo */
+    }
+
+    .percentage {
+        font-size: 1.5rem; /* Tamanho menor para a porcentagem */
+    }
+}
+
+/* Tema Claro */
+body.light-theme {
+    background-color: #ffffff; /* Cor de fundo clara */
+    color: #333; /* Cor do texto clara */
+}
+
+    body.light-theme .footer-content {
+        background-color: #f4f4f4; /* Fundo do rodapé claro */
+    }
+
+    body.light-theme .about-text-description {
+        color: #333; /* Cor do texto sobre o site */
+    }
+
+    body.light-theme .login-section-adm {
+        background-color: #bdbdbd; /* Fundo da seção de login claro */
+        border: 1px solid #ccc; /* Borda clara */
+        color: #333; /* Cor do texto clara */
+    }
+
+    body.light-theme .login-title-adm,
+    body.light-theme .label-adm {
+        color: black; /* Cor do título e labels */
+    }
+
+    body.light-theme .input-adm {
+        border: 1px solid #ccc; /* Borda dos inputs */
+        color: #333; /* Cor do texto dos inputs */
+    }
+
+/* Tema Escuro */
+body.dark-theme {
+    background-color: #000000; /* Cor de fundo escura */
+    color: #ffffff; /* Cor do texto clara */
+}
+
+    body.dark-theme .footer-content {
+        background-color: #000000; /* Fundo do rodapé escuro */
+    }
+
+    body.dark-theme .about-text-description {
+        color: #ffffff; /* Cor do texto sobre o site em tema escuro */
+    }
+
+    body.dark-theme .login-section-adm {
+        background-color: #000000; /* Fundo da seção de login escuro */
+        border: 1px solid #555; /* Borda escura */
+    }
+
+    body.dark-theme .login-title-adm,
+    body.dark-theme .label-adm {
+        color: #ffffff; /* Cor do título e labels em tema escuro */
+    }
+
+    body.dark-theme .input-adm {
+        border: 1px solid #777; /* Borda dos inputs em tema escuro */
+        background-color: #2c2c2c; /* Fundo dos inputs escuro */
+        color: #ffffff; /* Cor do texto dos inputs */
+    }
+
+/* Estilos Comuns */
+.footer-content {
+    padding: 20px;
+}
+
+.login-section-adm {
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px; /* Espaçamento superior para separar da seção sobre o site */
+}
+
+.login-title-adm {
+    font-size: 1.5rem;
+}
+
+.form-group-adm {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-adm {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+#button-adm {
+    width: 50%;
+    padding: 10px;
+    background-color: #007bff; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    border-radius: 25px; /* Bordas arredondadas */
+    cursor: pointer;
+}
+
+.text-danger {
+    color: #d9534f; /* Cor das mensagens de erro */
+}
+
+
+/*~~~~~~~~~~~rodape~~~~~~~~*/

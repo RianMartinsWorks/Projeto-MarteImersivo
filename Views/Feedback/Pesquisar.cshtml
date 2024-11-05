@@ -1,0 +1,67 @@
+﻿@model IEnumerable<PIM_WEB_MARTE.Models.Feedback>
+
+@{
+    ViewBag.Title = "Pesquisar";
+}
+
+<style>
+    body {
+        background: url(/Imagens/bg3.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+    }
+</style>
+
+<div class="container">
+    <h2>Pesquisar Feedbacks</h2>
+
+    @using (Html.BeginForm("Pesquisar", "Feedback", FormMethod.Get))
+    {
+        <div class="form-group">
+            @Html.Label("Pesquisar por Resposta", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="text" name="searchTerm" class="form-control" placeholder="Digite uma resposta ou sugestão" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Pesquisar" class="btn btn-primary" />
+            </div>
+        </div>
+    }
+
+    <hr />
+
+    <h4>Resultados da Pesquisa</h4>
+    <table class="table">
+        <tr>
+            <th>Resposta 1</th>
+            <th>Resposta 2</th>
+            <th>Resposta 3</th>
+            <th>Sugestão</th>
+            <th>Email</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Resposta1</td>
+                <td>@item.Resposta2</td>
+                <td>@item.Resposta3</td>
+                <td>@item.Sugestao</td>
+                <td>@item.Email</td>
+            </tr>
+        }
+    </table>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
