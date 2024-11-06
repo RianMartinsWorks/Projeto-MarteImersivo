@@ -26,12 +26,10 @@ namespace PIM_WEB_MARTE.Controllers
 
         public ActionResult Pesquisar(string searchTerm)
         {
-            // Verifica se o termo de pesquisa foi fornecido
             var feedbacks = from f in db.Feedback select f;
 
             if (!String.IsNullOrEmpty(searchTerm))
             {
-                // Filtra os resultados com base no termo fornecido
                 feedbacks = feedbacks.Where(f => f.Resposta1.Contains(searchTerm) ||
                                                  f.Resposta2.Contains(searchTerm) ||
                                                  f.Resposta3.Contains(searchTerm) ||
@@ -146,11 +144,11 @@ namespace PIM_WEB_MARTE.Controllers
             base.Dispose(disposing);
         }
 
-        private readonly Contexto _context; // Seu DbContext
+        private readonly Contexto _context; // o DbContext
 
         public FeedbackController()
         {
-            _context = new Contexto(); // Inicialize seu contexto
+            _context = new Contexto(); // Inicia o contexto
         }
 
 

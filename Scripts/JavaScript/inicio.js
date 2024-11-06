@@ -12,9 +12,9 @@
     homeSection.classList.toggle("dark-theme");
 
     if (document.body.classList.contains("dark-theme")) {
-        this.textContent = "Alternar para Tema Claro";
-        } else {
         this.textContent = "Alternar para Tema Escuro";
+        } else {
+        this.textContent = "Alternar para Tema Claro";
         }
 
         setTimeout(() => {

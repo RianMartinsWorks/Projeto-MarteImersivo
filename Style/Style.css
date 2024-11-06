@@ -6,14 +6,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 
-
 html, body {
     max-width: 100%;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    outline: none; /* Remove contorno */
-    user-select: none; /* Evita seleção de texto */
+    outline: none; 
+    user-select: none; 
     caret-color: transparent; /* Remove o cursor piscante */
 }
 
@@ -26,19 +25,18 @@ img {
 
 .container, .container-fluid {
     margin: 0 auto;
-    padding: 0 15px; /* Espaço interno para evitar que conteúdo encoste nas bordas */
+    padding: 0 15px; 
 }
 
 .navbar {
-    width: 100%; /* Garante que não estoure */
+    width: 100%; 
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 /* Seção principal */
 #Inicio {
     position: relative;
-    overflow: hidden; /* Evita overflow do conteúdo */
+    overflow: hidden; 
     padding: 1rem 0;
 }
 
@@ -74,7 +72,6 @@ img {
     z-index: 0;
 }
 
-/* Conteúdo acima da imagem de fundo */
 #Inicio h1,
 #Inicio p,
 #Inicio img {
@@ -82,7 +79,6 @@ img {
     z-index: 1;
 }
 
-/* Imagem responsiva */
 img {
     max-width: 100%;
     height: auto;
@@ -90,28 +86,25 @@ img {
     margin: 0 auto;
 }
 
-/* Media Query para telas pequenas */
+/*Query para celulares*/
 @media (max-width: 668px) {
     h1 {
-        font-size: 1rem; /* Ajusta o tamanho do título */
+        font-size: 1rem; 
     }
 
     p {
-        font-size: 0.5rem; /* Ajusta o texto descritivo */
+        font-size: 0.5rem;
         padding: 0 10px;
     }
 }
 
-/* Garante alinhamento em telas grandes */
+/* Alinhamento para telas*/
 .container-fluid {
     margin: 0 auto;
     padding: 0 15px;
 }
 
 
-
-
-/* Estilização dos links */
 .nav-link {
     transition: color 0.5s ease;
 }
@@ -120,9 +113,8 @@ img {
         color: #cf1f1f;
     }
 
-/* Tema Claro */
 .navbar-light-theme {
-    background-color: #e6f1fa;
+    background-color: #ffffff;
     color: #333333;
 }
 
@@ -160,11 +152,10 @@ img {
     }
 
         .navbar-dark-theme .nav-link:hover {
-            color: #cf1f1f !important; /* Efeito hover vermelho */
+            color: #cf1f1f !important; /* Efeito do mouse */
         }
 
 /* Tema Escuro */
-
 
 .dark-theme {
     background-color: #000000;
@@ -181,9 +172,8 @@ img {
     }
 
 
-    /*~~~~~~~~~~~~~MAPA~~~~~~~~~~~~~~~~~~*/
+    /*MAPA*/
 
-/* Seção Mapa */
 #Mapa {
     position: relative;
     overflow: hidden;
@@ -194,21 +184,18 @@ img {
 
 }
       
-
-/* Estilo do Título Mapa do Museu */
 #mapTitle {
-    position: relative; /* Torna o título relativo ao seu espaço */
-    z-index: 2; /* Coloca o título acima de outros elementos */
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para melhor legibilidade */
-    color: white; /* Cor do texto */
-    padding: 10px; /* Adiciona algum espaçamento ao redor do texto */
-    border-radius: 8px; /* Arredonda as bordas do fundo do título */
+    position: relative; 
+    z-index: 2; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    padding: 10px; 
+    border-radius: 8px; 
 }
 
-/* Ajusta a imagem do mapa */
 #Mapa img {
-    max-width: 800px; /* Largura máxima para desktops */
-    width: 90%; /* Ajusta para telas menores */
+    max-width: 800px;
+    width: 90%; 
     height: auto;
     display: block;
     margin: 0 auto;
@@ -217,20 +204,39 @@ img {
 
 /* Tema Claro */
 .light-theme #Mapa {
-    background-image: url('/Imagens/bg1-claro.png');
-    background-size: cover;
-    background-position: center;
-    color: black;
+    background-image: url('/Imagens/bg1-claro.png') 
 }
 
-    .light-theme #Mapa h1 {
-        color: black;
-        background-color: #ffffff;
-        padding: 10px 20px;
-        border-radius: 8px;
+    .light-theme #Mapa img {
+        content: url('/Imagens/mapa.png'); 
+        max-width: 800px;
+        border-radius: 25px;
+        border: 5px solid rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
+        .light-theme #Mapa img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+.light-theme #Mapa h1 {
+    color: black;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
 /* Tema Escuro */
+.dark-theme #Mapa {
+    background-color: #1a1a1a;
+}
+
+    .dark-theme #Mapa img {
+        content: url('/Imagens/MapaPreto.png'); 
+    }
+
 .dark-theme #Mapa {
     background-image: url('/Imagens/bg1.png');
     background-size: cover;
@@ -245,27 +251,26 @@ img {
         border-radius: 8px;
     }
 
-/* Responsividade: Ajuste para dispositivos menores */
 @media (max-width: 768px) {
     #mapTitle {
-        font-size: 1.8rem; /* Reduz o tamanho do título */
+        font-size: 1.8rem; 
         margin-bottom: 20px;
     }
 
     #Mapa img {
-        max-width: 100%; /* A imagem ocupa no máximo a largura da tela */
+        max-width: 100%; 
         height: auto;
     }
 }
 
 @media (max-width: 576px) {
     #mapTitle {
-        font-size: 1.5rem; /* Título ainda menor para pequenos dispositivos */
+        font-size: 1.5rem;
     }
 
     #Mapa img {
-        max-width: 90%; /* Evita que ocupe toda a largura em telas muito pequenas */
-        border-radius: 15px; /* Ajusta o raio da borda para dispositivos menores */
+        max-width: 90%; 
+        border-radius: 15px;
     }
 }
 
@@ -287,7 +292,7 @@ img {
 .submit-btn {
     width: 100%;
     padding: 1rem;
-    background-color: #4CAF50; /* Cor do botão */
+    background-color: #4CAF50; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -296,11 +301,11 @@ img {
 }
 
     .submit-btn:hover {
-        background-color: #45a049; /* Cor ao passar o mouse */
+        background-color: #45a049; 
     }
 
 
- /* Container principal para os contêineres de Marte, Serviços e Objetivos */
+ /* Marte, Serviços e Objetivos */
 
 body {
     font-family: Arial, sans-serif;
@@ -310,23 +315,23 @@ body {
 
 .container {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem linha quando necessário */
+    flex-wrap: wrap; 
     justify-content: space-between; /* Espaçamento entre as divs */
     align-items: flex-start;
     margin: 20px auto; /* Centraliza o container horizontalmente */
-    width: 90%; /* Define uma largura para o container */
-    max-width: 1200px; /* Limita o tamanho máximo para telas maiores */
+    width: 90%; 
+    max-width: 1200px; 
 }
 
 .custom-div {
-    background-color: #cf1f1f; /* Cor de fundo padrão */
-    color: #fff; /* Cor do texto */
+    background-color: #cf1f1f;
+    color: #fff; 
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
     text-align: center;
-    flex: 1 1 30%; /* Permite que o tamanho mude com o espaço disponível */
-    min-width: 250px; /* Define uma largura mínima para dispositivos menores */
+    flex: 1 1 30%;
+    min-width: 250px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -347,124 +352,117 @@ body {
     margin: 10px auto;
 }
 
-/* Tema Claro */
 .light-theme {
-    background-image: url(/Imagens/fundoestrelado.png);
-    color: black; /* Altera a cor do texto para preto */
+    background-image: url(/Imagens/fundosite.jpg);
+    color: black; 
 }
 
-/* Tema Escuro */
 .dark-theme {
     background-image: url(/Imagens/bgpapel.png);
-    color: white; /* Altera a cor do texto para branco */
+    color: white;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .custom-div {
-        flex: 1 1 100%; /* Ocupa toda a largura em telas menores */
-        margin: 10px 0; /* Margem vertical entre os divs */
+        flex: 1 1 100%; 
+        margin: 10px 0; 
     }
 }
 
 @media (max-width: 576px) {
     .custom-div h2 {
-        font-size: 20px; /* Tamanho do título menor em telas muito pequenas */
+        font-size: 20px; 
     }
 
     .custom-div p {
-        font-size: 14px; /* Tamanho do texto menor em telas muito pequenas */
+        font-size: 14px; 
     }
 
     .divider {
-        width: 80px; /* Dimensões menores para o divisor */
+        width: 80px; 
     }
 }
 
-/* Estilos adicionais para a seção História */
+/*História */
+
 #Historia {
-    background-image: url(/Imagens/bgpapel3.png); /* Imagem de fundo */
-    margin-block-end: 30px; /* Margem inferior */
+    background-image: url(/Imagens/bgpapel3.png); 
+    margin-block-end: 30px; 
     padding: 50px 20px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o conteúdo */
-    border-radius: 15px; /* Arredondar bordas da seção */
+    text-align: center; 
+    border-radius: 15px; 
 }
 
-/* Títulos na seção História */
 #Historia h1 {
-    color: black; /* Cor do título no tema claro */
-    font-size: 2.5rem; /* Tamanho maior para o título */
-    margin-bottom: 20px; /* Espaçamento inferior */
+    color: black; 
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
 }
 
 .dark-theme #Historia h1 {
-    color: white; /* Cor do título no tema escuro */
+    color: white; 
 }
 
-/* Estilos para os contêineres do carrossel */
+/* Carrossel */
 .carousel-inner img {
-    border-radius: 20px; /* Arredondar bordas das imagens do carrossel */
+    border-radius: 20px; 
 }
 
 /* Contêiner de texto */
 .text-container {
-    border-radius: 20px; /* Arredondar bordas do contêiner de texto */
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
-    color: white; /* Cor do texto */
-    padding: 10px; /* Espaçamento interno */
-    height: 280px; /* Altura fixa para o contêiner de texto */
-    margin-top: 70px; /* Margem superior */
-    max-width: 500px; /* Limita a largura do texto */
-    display: flex; /* Flexbox para centralizar o texto */
-    flex-direction: column; /* Direção vertical */
-    justify-content: center; /* Centraliza verticalmente */
+    border-radius: 20px; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    padding: 10px; 
+    height: 280px; 
+    margin-top: 70px; 
+    max-width: 500px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
 }
 
-/* Definindo tamanhos das fontes */
 .text-container h2 {
-    font-size: 1.5rem; /* Tamanho da fonte do título */
-    margin: 0; /* Remove margens */
+    font-size: 1.5rem; 
+    margin: 0;
 }
 
 .text-container h3 {
-    font-size: 1rem; /* Tamanho da fonte da descrição */
-    margin: 0; /* Remove margens */
+    font-size: 1rem; 
+    margin: 0; 
 }
 
-/* Estilo para tema claro na seção História */
 .light-theme #Historia {
-    background-image: url(/Imagens/fundosite.jpg); /* Imagem de fundo para tema claro */
-    color: black; /* Cor do texto para o tema claro */
+    background-image: url(/Imagens/fundosite.jpg);
+    color: black;
 }
 
-/* Estilo para tema escuro */
 .dark-theme #Historia {
-    background-image: url(/Imagens/bgpapel3.png); /* Imagem de fundo para tema escuro */
-    color: white; /* Cor do texto para o tema escuro */
+    background-image: url(/Imagens/bgpapel3.png); 
+    color: white;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     #Historia h1 {
-        font-size: 2rem; /* Tamanho menor para telas pequenas */
+        font-size: 2rem;
     }
 
     .carousel-inner img {
-        height: 250px; /* Altura menor das imagens do carrossel */
+        height: 250px;
     }
 
     .text-container {
-        max-width: 90%; /* Largura total para dispositivos móveis */
-        margin: 0 auto; /* Centraliza o contêiner de texto */
-        height: 180px; /* Altura fixa para o contêiner de texto */
+        max-width: 90%; 
+        margin: 0 auto; 
+        height: 180px;
     }
 
-    /* Flexbox para empilhar no mobile */
     .w-100.d-flex {
-        flex-direction: column; /* Empilha os elementos verticalmente */
+        flex-direction: column; /* Elementos verticalmente no mobile */
     }
 
-    /* Altera o tamanho do carrossel para 100% na tela pequena */
     #carouselExampleIndicators {
         max-width: 100%; /* Largura total no mobile */
     }
@@ -474,151 +472,146 @@ body {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: red; /* Cor dos ícones */
-    border-radius: 50%; /* Forma circular */
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 50%;
+    border-radius: 10px;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
-    border-radius: 10px; /* Bordas arredondadas */
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px;
 }
 
 .carousel-indicators button {
-    background-color: gray; /* Cor padrão dos botões */
-    border-radius: 10px; /* Bordas arredondadas */
+    background-color: gray; 
+    border-radius: 10px; 
 }
 
     .carousel-indicators button.active {
-        background-color: red; /* Cor do botão ativo */
-        border-radius: 10px; /* Bordas arredondadas */
+        background-color: red; 
+        border-radius: 10px;
     }
     
-    /* Estilizando os botões de navegação */
     #carouselExampleIndicators .carousel-control-prev-icon,
     #carouselExampleIndicators .carousel-control-next-icon {
-        background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+        background-color: rgba(0, 0, 0, 0.5); 
         border-radius: 50%; /* Deixa o botão redondo */
         padding: 10px;
     }
 
-    /* Centralizando e ajustando os botões */
     #carouselExampleIndicators .carousel-control-prev,
     #carouselExampleIndicators .carousel-control-next {
         width: 40px;
         height: 40px;
-        top: 50%; /* Posiciona o botão no meio verticalmente */
-        transform: translateY(-50%); /* Ajusta para centralizar completamente */
+        top: 50%; 
+        transform: translateY(-50%); 
         border: 2px solid white;
         border-radius: 50%;
         transition: transform 0.2s ease;
     }
 
-    /* Efeito de hover */
     #carouselExampleIndicators .carousel-control-prev:hover,
     #carouselExampleIndicators .carousel-control-next:hover {
-        transform: translateY(-50%) scale(1.1); /* Centraliza e aumenta no hover */
+        transform: translateY(-50%) scale(1.1);
         background-color: rgba(0, 0, 0, 0.7);
     }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~DIVIDIR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*Questionário*/
 
-/* Questionário */
 #Questionario {
-    background: url(../Imagens/bgquestionarioblack.png); /* Imagem de fundo para o tema escuro */
+    background: url(../Imagens/bgquestionarioblack.png);
     background-size: cover; /* Para cobrir toda a área */
     width: 100%;
-    color: snow; /* Cor do texto no tema escuro */
+    color: snow;
 }
 
 #questionario-form {
-    max-width: 500px; /* Limita a largura máxima do formulário */
-    width: 100%; /* Ocupa 100% da largura disponível */
-    margin: 0 auto; /* Centraliza o formulário */
-    padding: 20px; /* Espaçamento interno */
-    background: url(../Imagens/bgpapel3.png); /* Cor de fundo clara para o formulário */
-    border-radius: 30px; /* Bordas arredondadas */
-    text-align: center; /* Centraliza o conteúdo */
+    max-width: 500px; 
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px; 
+    background: url(../Imagens/bgpapel3.png);
+    border-radius: 30px; 
+    text-align: center; 
 }
 
     #questionario-form label {
-        font-size: 1.1rem; /* Tamanho da fonte dos labels */
+        font-size: 1.1rem;
         display: block; /* Exibe como bloco */
-        margin-bottom: 8px; /* Espaçamento entre o label e o campo */
-        width: 100%; /* Largura total do label */
-        text-align: center; /* Centraliza o texto dos labels */
+        margin-bottom: 8px;
+        width: 100%;
+        text-align: center; 
     }
 
     #questionario-form .form-group {
         display: flex;
-        justify-content: center; /* Centraliza o conteúdo da form-group */
+        justify-content: center; 
         flex-direction: column;
-        align-items: center; /* Alinha o conteúdo no centro */
-        width: 100%; /* Largura total */
+        align-items: center; 
+        width: 100%; 
     }
 
     #questionario-form .form-control {
-        font-size: 1rem; /* Tamanho da fonte nos campos */
-        padding: 10px; /* Padding interno nos campos */
-        border-radius: 10px; /* Bordas arredondadas */
-        margin-bottom: 20px; /* Espaçamento inferior */
-        width: 100%; /* Largura total */
-        text-align: center; /* Centraliza o texto dentro do campo select */
+        font-size: 1rem;
+        padding: 10px; 
+        border-radius: 10px; 
+        margin-bottom: 20px; 
+        width: 100%; 
+        text-align: center;
     }
 
     #questionario-form select {
-        text-align-last: center; /* Centraliza a opção selecionada */
+        text-align-last: center; 
     }
 
     #questionario-form button {
-        font-size: 1rem; /* Tamanho da fonte no botão */
-        padding: 12px; /* Padding no botão */
-        background-color: #e01b1b; /* Cor personalizada */
-        border-radius: 20px; /* Bordas arredondadas */
-        width: 80%; /* Botão ocupará 80% da largura do formulário */
-        color: white; /* Cor do texto */
+        font-size: 1rem; 
+        padding: 12px;
+        background-color: #e01b1b; 
+        border-radius: 20px;
+        width: 80%; 
+        color: white; 
         cursor: pointer; /* Mão ao passar o mouse */
-        transition: background-color 0.3s ease; /* Transição suave na cor */
+        transition: background-color 0.3s ease;
     }
 
         #questionario-form button:hover {
-            background-color: #e04a4a; /* Cor do botão ao passar o mouse */
+            background-color: #e04a4a;
         }
 
-/* Estilos para o tema claro */
 .light-theme #Questionario {
-    background: url(../Imagens/bgquestionarioclaro.png); /* Imagem de fundo para o tema claro */
-    color: snow; /* Cor do texto no tema claro */
+    background: url(../Imagens/bgquestionarioclaro.png); 
+    color: snow; 
 }
 
 .light-theme #questionario-form {
-    background: url(../Imagens/bgpapel3.png); /* Cor de fundo clara para o formulário no tema claro */
+    background: url(../Imagens/fundosite.jpg);
+    color:black
 }
 
-/* Estilos para o tema escuro */
 .dark-theme #Questionario {
-    background: url(../Imagens/bgquestionarioblack.png); /* Imagem de fundo para o tema escuro */
-    color: snow; /* Cor do texto no tema escuro */
+    background: url(../Imagens/bgquestionarioblack.png); 
+    color: snow; 
 }
 
 .dark-theme #questionario-form {
-    background: url(../Imagens/bgpapel3.png); /* Cor de fundo escura para o formulário no tema escuro */
+    background: url(../Imagens/bgpapel3.png);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     #questionario-form {
-        padding: 15px; /* Menos padding em telas pequenas */
+        padding: 15px;
     }
 
         #questionario-form h2 {
-            font-size: 1.5rem; /* Tamanho menor para o título */
+            font-size: 1.5rem;
         }
 
         #questionario-form .form-control,
         #questionario-form button {
-            font-size: 0.9rem; /* Tamanho da fonte menor nos campos e botão */
-            padding: 10px; /* Padding menor */
+            font-size: 0.9rem;
+            padding: 10px;
         }
 }
 
@@ -626,7 +619,6 @@ body {
 
 /* RESULTADOS */
 
-/* Seção de Resultados */
 .results-container {
     width: 100%;
     padding: 8rem 12rem;
@@ -635,7 +627,6 @@ body {
     align-items: center;
 }
 
-/* Estilo para o título da seção */
 .results-title {
     text-align: center;
     margin-bottom: 6rem;
@@ -647,7 +638,7 @@ body {
         letter-spacing: 0.5rem;
         font-weight: 500;
         margin-bottom: 30px;
-        color: black; /* Cor do texto para tema claro */
+        color: black; 
     }
 
     .results-title h1 {
@@ -657,13 +648,12 @@ body {
         color: #e02222;
     }
 
-/* Contêiner das métricas */
 .metrics-container {
     width: 100%;
     display: flex;
     justify-content: space-around;
     margin-bottom: 6rem;
-    flex-wrap: wrap; /* Permite empilhar as métricas em telas menores */
+    flex-wrap: wrap;
 }
 
 .metric {
@@ -671,13 +661,13 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 1rem; /* Margem para espaçamento */
+    margin: 1rem; 
 }
 
     .metric h3 {
         font-size: 1.5rem;
         font-family: "MontSerrat", sans-serif;
-        color: #000; /* Cor do texto para tema claro */
+        color: #000;
         margin-bottom: 2rem;
     }
 
@@ -695,11 +685,10 @@ body {
 
 .percentage {
     font-size: 2rem;
-    color: #fff; /* Cor do texto para porcentagem */
+    color: #fff; 
     font-weight: bold;
 }
 
-/* Seção de depoimentos */
 .testimonials-results-container {
     width: 100%;
 }
@@ -716,9 +705,8 @@ body {
     align-items: center;
 }
 
-/* Estilo para as citações */
 .quote {
-    background-color: #fff; /* Cor de fundo para tema claro */
+    background-color: #fff;
     padding: 2rem 4rem;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -737,123 +725,119 @@ body {
     color: #ff8255;
 }
 
-/* Estilos para o tema claro */
 .light-theme .results-container {
-    background: url(/Imagens/fundosite.jpg); /* Fundo para tema claro */
+    background: url(/Imagens/fundosite.jpg);
 }
 
-/* Estilos para o tema escuro */
 .dark-theme .results-title h2 {
-    color: white; /* Cor do título para tema escuro */
+    color: white; 
 }
 
 .dark-theme .results-title h1 {
-    color: #ff7b7b; /* Cor do título para tema escuro */
+    color: #ff7b7b; 
 }
 
 .dark-theme .metric h3 {
-    color: #fff; /* Cor do texto para métricas no tema escuro */
+    color: #fff;
 }
 
 .dark-theme .percentage-circle {
-    background-color: #ff4d4d; /* Círculo de porcentagem para tema escuro */
+    background-color: #ff4d4d; 
 }
 
 .dark-theme .quote {
-    background: url(/Imagens/bgpapel1.jpg); /* Fundo para citações no tema escuro */
-    color: white; /* Texto das citações no tema escuro */
+    background: url(/Imagens/bgpapel1.jpg);
+    color: white; 
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .results-title h2 {
-        font-size: 1.5rem; /* Tamanho menor para o título */
+        font-size: 1.5rem; 
     }
 
     .results-title h1 {
-        font-size: 2.5rem; /* Tamanho menor para o subtítulo */
+        font-size: 2.5rem; 
     }
 
     .metrics-container {
         flex-direction: column; /* Empilha as métricas verticalmente */
-        align-items: center; /* Centraliza as métricas */
+        align-items: center; 
     }
 
     .metric {
-        width: 80%; /* Limita a largura das métricas */
+        width: 80%; 
     }
 
     .percentage-circle {
-        width: 8rem; /* Tamanho menor para o círculo */
-        height: 8rem; /* Tamanho menor para o círculo */
+        width: 8rem; 
+        height: 8rem; 
     }
 
     .percentage {
-        font-size: 1.5rem; /* Tamanho menor para a porcentagem */
+        font-size: 1.5rem; 
     }
 }
 
-/* Tema Claro */
 body.light-theme {
-    background-color: #ffffff; /* Cor de fundo clara */
-    color: #333; /* Cor do texto clara */
+    background-color: #ffffff;
+    color: #000000;
 }
 
     body.light-theme .footer-content {
-        background-color: #f4f4f4; /* Fundo do rodapé claro */
+        background-color: #f4f4f4; 
     }
 
     body.light-theme .about-text-description {
-        color: #333; /* Cor do texto sobre o site */
+        color: #333;
     }
 
     body.light-theme .login-section-adm {
-        background-color: #bdbdbd; /* Fundo da seção de login claro */
-        border: 1px solid #ccc; /* Borda clara */
-        color: #333; /* Cor do texto clara */
+        background-color: #bdbdbd; 
+        border: 1px solid #ccc; 
+        color: #333; 
     }
 
     body.light-theme .login-title-adm,
     body.light-theme .label-adm {
-        color: black; /* Cor do título e labels */
+        color: black;
     }
 
     body.light-theme .input-adm {
-        border: 1px solid #ccc; /* Borda dos inputs */
-        color: #333; /* Cor do texto dos inputs */
+        border: 1px solid #ccc; 
+        color: #333; 
     }
 
-/* Tema Escuro */
 body.dark-theme {
-    background-color: #000000; /* Cor de fundo escura */
-    color: #ffffff; /* Cor do texto clara */
+    background-color: #000000; 
+    color: #ffffff; 
 }
 
     body.dark-theme .footer-content {
-        background-color: #000000; /* Fundo do rodapé escuro */
+        background-color: #000000; 
     }
 
     body.dark-theme .about-text-description {
-        color: #ffffff; /* Cor do texto sobre o site em tema escuro */
+        color: #ffffff; 
     }
 
     body.dark-theme .login-section-adm {
-        background-color: #000000; /* Fundo da seção de login escuro */
-        border: 1px solid #555; /* Borda escura */
+        background-color: #000000;
+        border: 1px solid #555; 
     }
 
     body.dark-theme .login-title-adm,
     body.dark-theme .label-adm {
-        color: #ffffff; /* Cor do título e labels em tema escuro */
+        color: #ffffff; 
     }
 
     body.dark-theme .input-adm {
-        border: 1px solid #777; /* Borda dos inputs em tema escuro */
-        background-color: #2c2c2c; /* Fundo dos inputs escuro */
-        color: #ffffff; /* Cor do texto dos inputs */
+        border: 1px solid #777;
+        background-color: #2c2c2c;
+        color: #ffffff; 
     }
 
-/* Estilos Comuns */
+
 .footer-content {
     padding: 20px;
 }
@@ -861,7 +845,7 @@ body.dark-theme {
 .login-section-adm {
     border-radius: 8px;
     padding: 20px;
-    margin-top: 20px; /* Espaçamento superior para separar da seção sobre o site */
+    margin-top: 20px; 
 }
 
 .login-title-adm {
@@ -884,16 +868,24 @@ body.dark-theme {
 #button-adm {
     width: 50%;
     padding: 10px;
-    background-color: #007bff; /* Cor do botão */
-    color: white; /* Cor do texto do botão */
-    border: none; /* Sem borda */
-    border-radius: 25px; /* Bordas arredondadas */
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 25px; 
     cursor: pointer;
 }
 
 .text-danger {
-    color: #d9534f; /* Cor das mensagens de erro */
+    color: #d9534f;
 }
 
-
-/*~~~~~~~~~~~rodape~~~~~~~~*/
+.section-divider {
+    border: 0;
+    border-top: 1px solid #000000; /* Altere a cor conforme necessário */
+    margin: 0;
+    width: 100%;
+}
+.results-container {
+    border-bottom: 0.5px solid #333; /* Cor e espessura da linha */
+    padding-bottom: 20px; /* Para dar espaço entre o conteúdo e a linha */
+}

@@ -203,6 +203,7 @@
     <Content Include="Imagens\bgquestionarioblack.png" />
     <Content Include="Imagens\bgquestionarioclaro.png" />
     <Content Include="Imagens\Escrita.png" />
+    <Content Include="Imagens\fundo2-branco.png" />
     <Content Include="Imagens\fundo2-claro.png" />
     <Content Include="Imagens\fundo2.jpg" />
     <Content Include="Imagens\fundoazul.jpg" />
@@ -211,6 +212,7 @@
     <Content Include="Imagens\fundopreto.jpg" />
     <Content Include="Imagens\fundoquestionario.png" />
     <Content Include="Imagens\fundosite.jpg" />
+    <Content Include="Imagens\fundoterra.jpg" />
     <Content Include="Imagens\historia1.png" />
     <Content Include="Imagens\historia2.png" />
     <Content Include="Imagens\historia3.png" />
@@ -220,6 +222,7 @@
     <Content Include="Imagens\logo5.png" />
     <Content Include="Imagens\logoAstronauta.png" />
     <Content Include="Imagens\mapa.png" />
+    <Content Include="Imagens\MapaPreto.png" />
     <Content Include="Imagens\martevermelho.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />

@@ -22,15 +22,14 @@
                 <img src="~/Imagens/Logo1.png" style="width: 280px; height: 70px;">
             </a>
 
-            <!-- Botão para alternar o menu em dispositivos móveis -->
+            <!-- Botão para o menu no mobile -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Itens do menu -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto" style="font-weight: bold; ">
                     <li class="nav-item">
                         <a class="nav-link" href="#Inicio">Página Inicial</a>
                     </li>
@@ -46,26 +45,23 @@
                 </ul>
             </div>
 
-            <!-- Botão de Alternância de Tema -->
             <button id="themeToggleBtn" class="btn btn-light btn-sm"
                     style="position: fixed; top: 10px; right: 10px; z-index: 9999;">
-                Alternar para Tema Escuro
+                Alterar Tema
             </button>
+
         </div>
     </nav>
 
     <section id="Inicio" class="vh-100 bg-black d-flex flex-column justify-content-center align-items-center text-center">
-        <div class="container-fluid text-white px-4">
-            <!-- Imagem no topo -->
+        <div class="container-fluid px-4">
             <img class="img-fluid mb-4"
                  src="~/Imagens/Escrita.png"
                  alt="Bem-vindo"
                  style="max-width: 350px;" />
 
-            <!-- Título -->
             <h1 class="fw-bold mb-4">Bem-vindo ao Museu Marte Imersivo</h1>
 
-            <!-- Texto descritivo -->
             <p class="lead" style="max-width: 42em; margin: 0 auto;">
                 Prepare-se para embarcar em uma aventura extraordinária e explorar os mistérios de Marte!
                 Aqui, você será transportado para um mundo onde a ficção científica se encontra com a
@@ -75,7 +71,7 @@
         </div>
     </section>
 
-  
+
     <style>
         #Mapa img {
             max-width: 800px;
@@ -85,7 +81,6 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-            /* Efeito de hover no mapa */
             #Mapa img:hover {
                 transform: scale(1.05);
                 box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
@@ -95,12 +90,12 @@
         <h1 class="fw-bold mb-4" id="mapTitle">Mapa do Museu</h1>
 
         <div class="d-flex justify-content-center align-items-center w-100">
-            <img class="img-fluid"
-                 src="~/Imagens/mapa.png"
-                 alt="Mapa do Museu"
-                 style="max-width: 800px; border-radius: 25px;" />
+            <!-- Imagem do Mapa -->
+            <img id="mapImage" class="img-fluid" alt="Mapa do Museu" />
         </div>
     </section>
+
+
 
 
 
@@ -146,33 +141,30 @@
         </div>
         <style>
 
-            /* Estilizando os botões de navegação */
+            /* Estilo para os botões de navegação */
             #carouselExampleIndicators .carousel-control-prev-icon,
             #carouselExampleIndicators .carousel-control-next-icon {
-            background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
-            border-radius: 50%; /* Deixa o botão redondo */
-            padding: 10px;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 50%;
+                padding: 10px;
             }
 
-            /* Centralizando e ajustando os botões */
             #carouselExampleIndicators .carousel-control-prev,
             #carouselExampleIndicators .carousel-control-next {
-            width: 40px;
-            height: 40px;
-            top: 50%; /* Posiciona o botão no meio verticalmente */
-            transform: translateY(-50%); /* Ajusta para centralizar completamente */
-            border: 2px solid white;
-            border-radius: 50%;
-            transition: transform 0.2s ease;
+                width: 40px;
+                height: 40px;
+                top: 50%;
+                transform: translateY(-50%);
+                border: 2px solid white;
+                border-radius: 50%;
+                transition: transform 0.2s ease;
             }
 
-            /* Efeito de hover */
-            #carouselExampleIndicators .carousel-control-prev:hover,
-            #carouselExampleIndicators .carousel-control-next:hover {
-            transform: translateY(-50%) scale(1.1); /* Centraliza e aumenta no hover */
-            background-color: rgba(0, 0, 0, 0.7);
-            }
-
+                #carouselExampleIndicators .carousel-control-prev:hover,
+                #carouselExampleIndicators .carousel-control-next:hover {
+                    transform: translateY(-50%) scale(1.1);
+                    background-color: rgba(0, 0, 0, 0.7);
+                }
         </style>
         <div class="w-100 d-flex flex-wrap justify-content-center align-items-start" style="gap: 20px;">
             <div id="carouselExampleIndicators" class="carousel slide" style="max-width: 600px; flex: 1;">
@@ -334,58 +326,59 @@
         </div>
     </section>
 
-    <section>
-        <footer class="footer-content d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center text-white">
-            <!-- Seção sobre o site -->
-            <div class="about-text col-12 col-md-7 text-center mb-4 mb-md-0">
-                <h2>
-                    <img src="~/Imagens/Logo1.png" alt="Logo do site" class="img-fluid" style="max-width: 80%; height: auto;" />
-                </h2>
-                <br>
-                <p class="about-text-description">
-                    Explore os mistérios de Marte, onde tecnologia e história se unem para trazer o universo à ponta<br>dos seus dedos. Fique ligado enquanto continuamos a expandir com novos temas e exibições.
-                </p>
-            </div>
+    <hr class="section-divider">
 
-            <!-- Seção de login -->
-            <section class="login-section-adm col-12 col-md-5 text-center">
+    <section class="footer-section bg-black d-flex flex-column justify-content-between align-items-center py-5" style="min-height: 50vh;">
+        <div class="text-center mb-4">
+            <h2>
+                <img src="~/Imagens/Logo1.png" alt="Logo do site" class="img-fluid" style="max-width: 40%; height: auto;" />
+            </h2>
+            <p class="about-text-description mt-3" style="font-weight: bold; ">
+                Descubra os segredos de Marte e explore a fusão entre ciência e história.<br /> Atualizamos com novos conteúdos e exibições para enriquecer sua jornada pelo universo.
+            </p>
+        </div>
+        <div class="text-center mt-auto" style="font-weight: bold; ">
+            <p class="mb-1">Entre em contato conosco:</p>
+            <p class="mb-3">
+                <a href="mailto:marteimersivototem@hotmail.com" class="text-decoration-none text-xxl-start">
+                    marteimersivototem@hotmail.com
+                </a>
+            </p>
+            <p class="m-0">&copy; 2024 Marte Explora. Todos os direitos reservados.</p>
+        </div>
+    </section>
+
+
+    <!--   <section class="login-section-adm col-12 col-md-5 text-center">
                 <h2 class="login-title-adm mb-4">Login de Administrador</h2>
 
                 @using (Html.BeginForm("Entrar", "Admin", FormMethod.Post))
                 {
-                    <!-- Exibe mensagens de erro gerais, se houver -->
-                    <div class="text-danger mb-3">
-                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                    </div>
+                <div class="text-danger mb-3">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                </div>
 
-                    <div class="form-group-adm mb-3">
-                        <label for="Login" class="label-adm">Usuário</label>
-                        <input type="text" asp-for="Login" id="Login" name="Login" class="input-adm" placeholder="Digite seu nome de usuário" required>
-                        <span class="text-danger">@Html.ValidationMessageFor(x => x.Login)</span>
-                    </div>
+                <div class="form-group-adm mb-3">
+                    <label for="Login" class="label-adm">Usuário</label>
+                    <input type="text" asp-for="Login" id="Login" name="Login" class="input-adm" placeholder="Digite seu nome de usuário" required>
+                    <span class="text-danger">@Html.ValidationMessageFor(x => x.Login)</span>
+                </div>
 
-                    <div class="form-group-adm mb-3">
-                        <label for="Senha" class="label-adm">Senha</label>
-                        <input type="password" asp-for="Senha" id="Senha" name="Senha" class="input-adm" placeholder="Digite sua senha" required>
-                        <span class="text-danger">@Html.ValidationMessageFor(x => x.Senha)</span>
-                    </div>
+                <div class="form-group-adm mb-3">
+                    <label for="Senha" class="label-adm">Senha</label>
+                    <input type="password" asp-for="Senha" id="Senha" name="Senha" class="input-adm" placeholder="Digite sua senha" required>
+                    <span class="text-danger">@Html.ValidationMessageFor(x => x.Senha)</span>
+                </div>
 
-                    <div class="form-group-adm">
-                        <button type="submit" id="button-adm" class="btn btn-primary w-100">Entrar</button>
-                    </div>
-                }
-            </section>
-        </footer>
-
-
+                <div class="form-group-adm">
+                    <button type="submit" id="button-adm" class="btn btn-primary w-100">Entrar</button>
+                </div>
+            }
     </section>
+            </footer>
+        </section> -->
 
-    <section class="bg-black d-flex justify-content-center flex-column align-items-center text-center">
-        <p>&copy; 2024 Seu Projeto. Todos os direitos reservados.</p>
-        <div class="copyright">
-            <span>&copy; MARTE IMERSIVO 2024</span>
-        </div>
-    </section>
+
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

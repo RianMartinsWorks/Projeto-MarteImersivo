@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PIM_WEB_MARTE.Models
 {
+    //Tabela Feedback
     [Table("Feedback")]
     public class Feedback
     {

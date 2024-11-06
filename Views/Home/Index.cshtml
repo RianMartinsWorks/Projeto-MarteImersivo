@@ -12,19 +12,16 @@
 <style>
 
 
-    /* Tema Claro */
     .light-theme {
         background-color: #f8f9fa;
         color: #000;
     }
 
-    /* Tema Escuro */
     .dark-theme {
         background-color: #343a40;
         color: #fff;
     }
 
-    /* Estilo para a seção Home */
     #Home.light-theme {
         background-image: url('/Imagens/fundo2.jpg');
         background-size: cover;
@@ -35,35 +32,32 @@
         background-size: cover;
     }
 
-    /* Classe para altura total */
+    /* Altura total */
     .full-height {
         height: 100vh;
     }
 
-    /* Ajustes para imagem menor */
     .logo-small {
-        max-width: 350px; /* Ajuste para imagem menor */
+        max-width: 350px;
         height: auto;
     }
 
-    /* Ajustes para o botão menor */
     .btn-start {
-        max-width: 350px; /* Ajuste para botão menor */
-        font-size: 1rem; /* Tamanho de fonte menor */
+        max-width: 350px; 
+        font-size: 1rem; 
         border: 5px solid rgb(255, 32, 36);
     }
 
-    /* Ajustes do botão de tema */
     #themeToggleBtn {
         font-size: 10px;
         padding: 3px 8px;
     }
 
     .logo-small {
-        outline: none; /* Remove contorno */
-        user-select: none; /* Evita seleção de texto */
-        pointer-events: none; /* Impede interações */
-        caret-color: transparent; /* Remove o cursor piscante */
+        outline: none; 
+        user-select: none; 
+        pointer-events: none; 
+        caret-color: transparent; 
     }
 
    
@@ -72,17 +66,16 @@
 
 <main>
     <section id="Home" class="light-theme">
-        <!-- Link Admin fixo no topo à direita -->
         <a class="btn nav-link text-white px-3 py-1 rounded-lg shadow-lg position-absolute"
            runat="server" href="~/Admin/Index"
            style="top: 50px; right: 20px; font-size: 0.8rem; border: 2px solid rgb(0, 0, 0); background-color: #cf1f1f;">
             <h6>Admin</h6>
         </a>
 
-        <!-- Botão para alternar entre temas -->
-        <button id="themeToggleBtn" class="btn btn-light" style="position: fixed; top: 10px; right: 10px; z-index: 9999; padding: 3px 8px; font-size: 12px;">Alternar para Tema Escuro</button>
 
-        <!-- Conteúdo central da página -->
+        <button id="themeToggleBtn" class="btn btn-light" style="position: fixed; top: 10px; right: 10px; z-index: 9999; padding: 3px 8px; font-size: 12px;">Alternar para Tema Claro</button>
+
+
         <div class="container d-flex justify-content-center align-items-center full-height">
             <div class="d-flex flex-column p-4 text-center">
                 <img src="~/Imagens/Logo1.png" class="img-fluid mb-3 logo-small" alt="Logo" tabindex="-1" />

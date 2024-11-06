@@ -12,13 +12,12 @@
         </h2>
     </div>
 
-    <!-- Seção de login de administrador -->
     <section class="login-section-adm" style="width: 100%; max-width: 500px; padding: 30px; border: 1px solid #ddd; background-color: #000000; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
         <h2 class="login-title-adm text-center mb-4" style="font-size: 2rem; color: #ffffff;">Login de Administrador</h2>
 
         @using (Html.BeginForm("Entrar", "Admin", FormMethod.Post))
         {
-            // Exibe mensagens de erro gerais, se houver
+            // Mensagens de erro gerais, se houver
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
             <div class="form-group-adm mb-3">

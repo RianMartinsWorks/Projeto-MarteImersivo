@@ -10,17 +10,17 @@ namespace PIM_WEB.Controllers
 
 
 
-        private readonly Contexto db = new Contexto(); // Inicializa o contexto do banco de dados
+        private readonly Contexto db = new Contexto(); // Inicia o contexto do banco de dados
 
         public ActionResult Index()
         {
-            return View(); // Certifique-se de que isso está apontando para a view correta
+            return View();
         }
 
         [HttpGet]
         public ActionResult Principal()
         {
-            // Busca todas as respostas
+            // Busca respostas
             var feedbacks = db.Feedback.ToList();
 
             // Verifica se os feedbacks foram recuperados
@@ -30,22 +30,22 @@ namespace PIM_WEB.Controllers
             }
             else
             {
-                // Calcula a média para cada pergunta (converta as respostas em números para calcular)
+                // Calculo da média para cada pergunta
                 var mediaResposta1 = feedbacks.Average(f => ConverterRespostaParaNumero(f.Resposta1));
                 var mediaResposta2 = feedbacks.Average(f => ConverterRespostaParaNumero(f.Resposta2));
                 var mediaResposta3 = feedbacks.Average(f => ConverterRespostaParaNumero(f.Resposta3));
 
-                // Passa os valores para a ViewBag
+                // Valores para a ViewBag
                 ViewBag.MediaResposta1 = mediaResposta1;
                 ViewBag.MediaResposta2 = mediaResposta2;
                 ViewBag.MediaResposta3 = mediaResposta3;
             }
 
-            return View(); // Retorna a view Principal.cshtml
+            return View();
         }
 
 
-        // Função auxiliar para converter respostas em valores numéricos
+        // Converter respostas em valores numéricos
         private int ConverterRespostaParaNumero(string resposta)
         {
             if (resposta == "Muito Boa") return 100;
@@ -84,7 +84,7 @@ namespace PIM_WEB.Controllers
         public ActionResult Index(string email)
         {
             Console.WriteLine(email);
-            // Lógica para gravar o email
+            // Gravar o email
             return Content($"Email recebido: {email}");
         }
 
@@ -97,11 +97,11 @@ namespace PIM_WEB.Controllers
                 db.Feedback.Add(feedback);
                 db.SaveChanges();
 
-                // Retorna um JSON com o sucesso e a URL de redirecionamento
+                // Se for com sucesso vai para tela de obrigado
                 return Json(new { success = true, redirectUrl = Url.Action("Obrigado", "Home") });
             }
 
-            // Em caso de falha, retorna os erros em formato JSON
+            // Em caso de falha retorna erros
             return Json(new { success = false, errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage) });
         }
     }

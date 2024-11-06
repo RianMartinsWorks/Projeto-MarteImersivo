@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PIM_WEB_MARTE.Models
 {
-
+    // Tabela Admin
     [Table("Admins")]
     public class AdminModel
     {

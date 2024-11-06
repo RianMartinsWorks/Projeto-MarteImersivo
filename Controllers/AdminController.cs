@@ -26,13 +26,13 @@ namespace PIM_WEB_MARTE.Controllers
 
             if (admin != null)
             {
-                // Login bem-sucedido, redireciona para a página de feedback ou outra página de administrador
+                // Login bem-sucedido
                 return RedirectToAction("Index", "Feedback");
             }
 
-            // Se o login falhar, exibe a mensagem de erro na mesma página
+            // Falha no login
             ModelState.AddModelError("", "Usuário ou senha inválidos.");
-            return View("Index", model); // Redireciona de volta para a view de login
+            return View("Index", model);
         }
         protected override void Dispose(bool disposing)
         {

@@ -11,8 +11,8 @@ form.addEventListener('submit', function (event) {
         .then(response => response.ok ? response.json() : Promise.reject('Erro ao enviar feedback'))
         .then(data => {
             if (data.success) {
-                // Redireciona para a página de agradecimento
-                window.location.href = data.redirectUrl; // Isso vai redirecionar corretamente
+
+                window.location.href = data.redirectUrl; 
             } else {
                 console.error('Erro no envio:', data.errors);
             }

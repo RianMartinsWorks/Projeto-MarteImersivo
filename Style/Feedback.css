@@ -29,7 +29,7 @@ h2 {
 
 /* Tornar a tabela responsiva */
 .table-responsive {
-    overflow-x: auto; /* Habilita rolagem horizontal em telas pequenas */
+    overflow-x: auto; 
 }
 
 table {
@@ -43,7 +43,7 @@ th, td {
     padding: 10px;
 }
 
-/* Responsividade para dispositivos móveis */
+/* Responsividade para celular*/
 @media (max-width: 768px) {
     .container {
         margin: 10px;
