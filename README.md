@@ -17,7 +17,7 @@ Site interativo desenvolvido como parte do **Projeto Integrado Multidisciplinar 
 
 ## Como rodar
 1. Clone o repositório:  
-   `git clone https://github.com/seu-usuario/seu-repositorio.git](https://github.com/RianMartinsWorks/Projeto-MarteImersivo`
+   `git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/RianMartinsWorks/Projeto-MarteImersivo](https://github.com/RianMartinsWorks/Projeto-MarteImersivo)`
 2. Instale as dependências:  
    `npm install`  
 3. Execute o projeto no servidor local
